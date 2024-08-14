@@ -86,16 +86,10 @@ void MainWindow::readSerial() {
         QString line = serialBuffer.left(lineEnd).trimmed();
         serialBuffer = serialBuffer.mid(lineEnd + 1);
 
-        if (line.contains(',')) {
-            processRadarData(line);
-        } else if (line == "LASER_ACTIVATED") {
-            handleLaserStatus("LASER_ACTIVATED");
-        } else if (line == "LASER_DEACTIVATED") {
-            handleLaserStatus("LASER_DEACTIVATED");
-        }
+        processRadarData(line);
     }
 }
-
+// kontol
 void MainWindow::processRadarData(const QString &data) {
     QStringList parts = data.split(',');
     if (parts.size() == 3) {
@@ -107,9 +101,8 @@ void MainWindow::processRadarData(const QString &data) {
         updateHeightDisplay(height);
 
         // Update labels
-        ui->angleLabel->setText(QString("%1°").arg(angle, 0, 'f', 1));
-        ui->rangeLabel->setText(QString("%1 cm").arg(distance, 0, 'f', 1));
-        ui->heightLabel->setText(QString("Height: %1 cm").arg(height, 0, 'f', 1));
+        ui->angleLabel->setText(QString("Angle: %1°").arg(angle, 0, 'f', 1));
+        ui->rangeLabel->setText(QString("Range: %1 cm").arg(distance, 0, 'f', 1));
 
         // Update status based on distance
         if (distance >= LASER_ACTIVATION_MIN_RANGE && distance <= LASER_ACTIVATION_MAX_RANGE) {

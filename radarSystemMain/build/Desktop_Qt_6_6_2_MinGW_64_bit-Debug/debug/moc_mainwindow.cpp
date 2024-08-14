@@ -67,13 +67,11 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "status",
     "setSliderEnabled",
     "enabled",
-    "handleLaserStatus",
-    "updateHeightDisplay",
-    "height"
+    "handleLaserStatus"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[60];
+    uint offsetsAndSizes[56];
     char stringdata0[11];
     char stringdata1[12];
     char stringdata2[1];
@@ -102,8 +100,6 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata25[17];
     char stringdata26[8];
     char stringdata27[18];
-    char stringdata28[20];
-    char stringdata29[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -136,9 +132,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(374, 6),  // "status"
         QT_MOC_LITERAL(381, 16),  // "setSliderEnabled"
         QT_MOC_LITERAL(398, 7),  // "enabled"
-        QT_MOC_LITERAL(406, 17),  // "handleLaserStatus"
-        QT_MOC_LITERAL(424, 19),  // "updateHeightDisplay"
-        QT_MOC_LITERAL(444, 6)   // "height"
+        QT_MOC_LITERAL(406, 17)   // "handleLaserStatus"
     },
     "MainWindow",
     "updateServo",
@@ -167,9 +161,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "status",
     "setSliderEnabled",
     "enabled",
-    "handleLaserStatus",
-    "updateHeightDisplay",
-    "height"
+    "handleLaserStatus"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -181,7 +173,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      20,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -189,26 +181,25 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,  134,    2, 0x08,    1 /* Private */,
-       4,    0,  137,    2, 0x08,    3 /* Private */,
-       5,    1,  138,    2, 0x08,    4 /* Private */,
-       7,    0,  141,    2, 0x08,    6 /* Private */,
-       8,    0,  142,    2, 0x08,    7 /* Private */,
-       9,    0,  143,    2, 0x08,    8 /* Private */,
-      10,    0,  144,    2, 0x08,    9 /* Private */,
-      11,    0,  145,    2, 0x08,   10 /* Private */,
-      12,    1,  146,    2, 0x08,   11 /* Private */,
-      14,    0,  149,    2, 0x08,   13 /* Private */,
-      15,    0,  150,    2, 0x08,   14 /* Private */,
-      16,    0,  151,    2, 0x08,   15 /* Private */,
-      17,    2,  152,    2, 0x08,   16 /* Private */,
-      20,    0,  157,    2, 0x08,   19 /* Private */,
-      21,    0,  158,    2, 0x08,   20 /* Private */,
-      22,    0,  159,    2, 0x08,   21 /* Private */,
-      23,    1,  160,    2, 0x08,   22 /* Private */,
-      25,    1,  163,    2, 0x08,   24 /* Private */,
-      27,    1,  166,    2, 0x08,   26 /* Private */,
-      28,    1,  169,    2, 0x08,   28 /* Private */,
+       1,    1,  128,    2, 0x08,    1 /* Private */,
+       4,    0,  131,    2, 0x08,    3 /* Private */,
+       5,    1,  132,    2, 0x08,    4 /* Private */,
+       7,    0,  135,    2, 0x08,    6 /* Private */,
+       8,    0,  136,    2, 0x08,    7 /* Private */,
+       9,    0,  137,    2, 0x08,    8 /* Private */,
+      10,    0,  138,    2, 0x08,    9 /* Private */,
+      11,    0,  139,    2, 0x08,   10 /* Private */,
+      12,    1,  140,    2, 0x08,   11 /* Private */,
+      14,    0,  143,    2, 0x08,   13 /* Private */,
+      15,    0,  144,    2, 0x08,   14 /* Private */,
+      16,    0,  145,    2, 0x08,   15 /* Private */,
+      17,    2,  146,    2, 0x08,   16 /* Private */,
+      20,    0,  151,    2, 0x08,   19 /* Private */,
+      21,    0,  152,    2, 0x08,   20 /* Private */,
+      22,    0,  153,    2, 0x08,   21 /* Private */,
+      23,    1,  154,    2, 0x08,   22 /* Private */,
+      25,    1,  157,    2, 0x08,   24 /* Private */,
+      27,    1,  160,    2, 0x08,   26 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -230,7 +221,6 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void, QMetaType::QString,   24,
     QMetaType::Void, QMetaType::Bool,   26,
     QMetaType::Void, QMetaType::QString,   24,
-    QMetaType::Void, QMetaType::Float,   29,
 
        0        // eod
 };
@@ -289,10 +279,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'handleLaserStatus'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'updateHeightDisplay'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<float, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
     >,
     nullptr
 } };
@@ -322,7 +309,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 16: _t->updateLaserStatus((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 17: _t->setSliderEnabled((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 18: _t->handleLaserStatus((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 19: _t->updateHeightDisplay((*reinterpret_cast< std::add_pointer_t<float>>(_a[1]))); break;
         default: ;
         }
     }
@@ -347,13 +333,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 20)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 20;
+        _id -= 19;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 20)
+        if (_id < 19)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 20;
+        _id -= 19;
     }
     return _id;
 }

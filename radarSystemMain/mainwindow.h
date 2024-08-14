@@ -42,7 +42,6 @@ private slots:
     void updateLaserStatus(const QString &status);
     void setSliderEnabled(bool enabled);
     void handleLaserStatus(const QString &status);
-    void updateHeightDisplay(float height);
 
 private:
     Ui::MainWindow *ui;
@@ -76,6 +75,8 @@ private:
     const float MAX_DETECTION_RANGE = 200.0;
     const float LASER_ACTIVATION_MIN_RANGE = 1.0;
     const float LASER_ACTIVATION_MAX_RANGE = 50.0;
+
+    void updateHeightDisplay(float height);
 };
 
 #endif // MAINWINDOW_H

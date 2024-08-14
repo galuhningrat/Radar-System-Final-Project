@@ -17,9 +17,9 @@
    <widget class="QLabel" name="heightLabel">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>730</y>
-      <width>171</width>
+      <x>750</x>
+      <y>700</y>
+      <width>271</width>
       <height>51</height>
      </rect>
     </property>
@@ -33,37 +33,11 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lablel_2">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>610</y>
-      <width>150</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>150</width>
-      <height>25</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>22</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Range:</string>
-    </property>
-   </widget>
    <widget class="QSlider" name="verticalSlider">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>530</y>
+      <x>510</x>
+      <y>540</y>
       <width>100</width>
       <height>200</height>
      </rect>
@@ -165,15 +139,15 @@
    <widget class="QLabel" name="angleLabel">
     <property name="geometry">
      <rect>
-      <x>790</x>
-      <y>570</y>
-      <width>101</width>
+      <x>780</x>
+      <y>560</y>
+      <width>181</width>
       <height>45</height>
      </rect>
     </property>
     <property name="maximumSize">
      <size>
-      <width>150</width>
+      <width>250</width>
       <height>45</height>
      </size>
     </property>
@@ -243,32 +217,6 @@
     </property>
     <property name="text">
      <string>there</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>530</y>
-      <width>150</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>150</width>
-      <height>25</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>22</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Angle:</string>
     </property>
    </widget>
    <widget class="QGraphicsView" name="graphicsView">
@@ -781,37 +729,18 @@
      <string>45</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>800</x>
-      <y>690</y>
-      <width>141</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>22</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Height:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="rangeLabel">
     <property name="geometry">
      <rect>
-      <x>760</x>
-      <y>650</y>
-      <width>175</width>
+      <x>750</x>
+      <y>630</y>
+      <width>250</width>
       <height>45</height>
      </rect>
     </property>
     <property name="maximumSize">
      <size>
-      <width>175</width>
+      <width>250</width>
       <height>45</height>
      </size>
     </property>

@@ -20,7 +20,7 @@ const float LASER_ACTIVATION_MIN_RANGE = 1.0;
 const float LASER_ACTIVATION_MAX_RANGE = 50.0;
 
 // ketinggian sensor dari tanah (dalam cm)
-const float SENSOR_HEIGHT = 180.0;
+const float SENSOR_HEIGHT = 181.5;
 // sudut kemiringan sensor HC-SR04 (dalam derajat)
 const float SENSOR_TILT = 45.0;
 
@@ -119,7 +119,7 @@ void outputDistance() {
   float heightFromGround = calculateHeight();
   Serial.print(servoSetting);
   Serial.print(",");
-  Serial.println(distance);
+  Serial.print(distance);
   Serial.print(",");
   Serial.println(heightFromGround);
 }
