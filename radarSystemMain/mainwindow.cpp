@@ -89,7 +89,7 @@ void MainWindow::readSerial() {
         processRadarData(line);
     }
 }
-// kontol
+
 void MainWindow::processRadarData(const QString &data) {
     QStringList parts = data.split(',');
     if (parts.size() == 3) {
@@ -119,6 +119,7 @@ void MainWindow::processRadarData(const QString &data) {
 }
 
 void MainWindow::updateHeightDisplay(float height) {
+    qDebug() << "height:" << height;
     ui->heightLabel->setText(QString("Height: %1 cm").arg(height, 0, 'f', 1));
 }
 

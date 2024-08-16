@@ -47,7 +47,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1021, 823);
+        MainWindow->resize(1022, 878);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         heightLabel = new QLabel(centralwidget);
@@ -87,7 +87,7 @@ public:
         button_auto->setFont(font2);
         angleLabel = new QLabel(centralwidget);
         angleLabel->setObjectName("angleLabel");
-        angleLabel->setGeometry(QRect(780, 560, 181, 45));
+        angleLabel->setGeometry(QRect(780, 560, 231, 45));
         angleLabel->setMaximumSize(QSize(250, 45));
         angleLabel->setFont(font);
         angleLabel->setAutoFillBackground(false);
@@ -196,7 +196,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1021, 25));
+        menubar->setGeometry(QRect(0, 0, 1022, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
