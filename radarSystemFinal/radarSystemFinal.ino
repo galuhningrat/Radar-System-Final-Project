@@ -1,4 +1,5 @@
 #include <Servo.h>
+#include <math.h>
 
 // Servo
 Servo myservo;
@@ -19,10 +20,12 @@ const float MAX_DETECTION_RANGE = 200.0;
 const float LASER_ACTIVATION_MIN_RANGE = 1.0;
 const float LASER_ACTIVATION_MAX_RANGE = 50.0;
 
-// ketinggian sensor dari tanah (dalam cm)
-const float SENSOR_HEIGHT = 181.5;
-// sudut kemiringan sensor HC-SR04 (dalam derajat)
+// Ketinggian sensor dari tanah (dalam cm)
+const float SENSOR_HEIGHT = 101.0;
+// Sudut kemiringan sensor HC-SR04 (dalam derajat)
 const float SENSOR_TILT = 45.0;
+// Setengah sudut bukaan sensor HC-SR04 (dalam derajat)
+const float HALF_SENSOR_ANGLE = 7.5;
 
 void setup() {
   Serial.begin(115200);
@@ -127,12 +130,29 @@ void outputDistance() {
 float calculateHeight() {
   if (distance == 0) return 0;
 
-  float angleRad = radians(SENSOR_TILT);
-  float heightFromSensor = distance * sin(angleRad);
-  float heightFromGround = SENSOR_HEIGHT + heightFromSensor;
+  float sensorAngleRad = radians(SENSOR_TILT);
+  float halfSensorAngleRad = radians(HALF_SENSOR_ANGLE);
 
-  return heightFromGround;
+  // Menghitung sudut efektif (sudut sensor + setengah sudut bukaan)
+  float effectiveAngleRad = sensorAngleRad + halfSensorAngleRad;
+
+  // Menghitung jarak horizontal dan vertikal
+  float horizontalDistance = distance * cos(effectiveAngleRad);
+  float verticalDistance = distance * sin(effectiveAngleRad);
+
+  // Menghitung ketinggian relatif terhadap sensor
+  float relativeHeight = verticalDistance;
+
+  // Menghitung ketinggian total dari tanah
+  float totalHeight = SENSOR_HEIGHT + relativeHeight;
+
+  // Jika objek berada di bawah garis tengah sensor
+  if (relativeHeight < 0) {
+    totalHeight = SENSOR_HEIGHT - abs(relativeHeight);
   }
+
+  return totalHeight;
+}
 
 void updateServoAuto() {
   if (servoIncreasing) {
